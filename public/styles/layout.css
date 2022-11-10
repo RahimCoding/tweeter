@@ -21,7 +21,14 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
+.container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items:center;
+  background-color: #f4f1ec;
+  flex-direction: column;
+}
 
 
 /*
