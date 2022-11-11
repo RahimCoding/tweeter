@@ -1,5 +1,4 @@
-
-#tweet-text{
+#tweet-text {
   border-bottom: 3px solid black;
   outline: none;
   align-items: center;
@@ -8,17 +7,66 @@
   width: 100%;
 }
 
-.counter{
+.counter {
   text-align: end;
   font-family: 'Bungee', cursive;
   font-size: 1em;
 }
 
-.new-tweet{
+.new-tweet {
   width: 100%;
 
 }
 
-h2{
+h2 {
   text-align: center;
+}
+
+.tweets {
+  display: flex
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  margin-right: 3%;
+  margin-left: 1%;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.tweets-section {
+  width: 100%;
+  border: 2px black solid;
+}
+
+.tweets-section:hover {
+  box-shadow: 10px 10px;
+}
+
+.tweet-header-avatar {
+  display: flex;
+  align-items: center;
+}
+.tweet-header-avatar img{
+  margin-right: 2%
+}
+
+.tweet-body-text {
+  border-bottom: black solid 2px;
+  margin-left: 2%;
+  margin-right: 1%;
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+}
+
+.tweet-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.icon-hover :hover{
+  color: red
 }

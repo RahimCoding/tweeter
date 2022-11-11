@@ -10,5 +10,4 @@ $(document).ready(function () {
       $("#tweet-button").css("color", "black");
     }
   });
-  console.log("its ready");
 });
