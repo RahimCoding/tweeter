@@ -26,6 +26,5 @@ This repository is built upon my HTML, CSS, JS, jQuery and AJAX front-end skills
 !["Screenshot of no chars error"](./public/images/NoCharsTypedError.png)
 !["Screenshot of too many chars error"](./public/images/tooManyCharsError.png)
 # 4 This is me posting a tweet!!!
-!["GIF of posting the tweet"](https://github.com/RahimCoding/tweeter/blob/master/public/images/gifOfPostingATweet.mp4)
-
+https://user-images.githubusercontent.com/112907944/201485972-b67afe77-605c-4c2e-857f-ca9a2a0090a7.mp4
 
