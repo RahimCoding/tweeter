@@ -1,28 +1,4 @@
 /* global style */
-.navbar-top{
-  /* box modeling */
-
-  height: 120px;
-  width: 100vw;
-  background-color:#4056A1 ;
-  color: #ffffff;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  position: fixed;
-
- /* flex properties */
-
-  display: flex;
-
-  /* horizontal (BASED on this case)*/
-
-  justify-content:space-between;
-  /* vertical (BASED on this case) */
-
-  align-items: center;
-}
-
-
 .navbar-logo {
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
@@ -40,20 +16,42 @@
 }
 
 
+.navbar-top {
+  /* box modeling */
+  background-color: #25008a;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  height: 120px;
+  width: 100vw;
+  color: #ffffff;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: absolute;
+
+  /* flex properties */
+
+  display: flex;
+
+  /* horizontal (BASED on this case)*/
+
+  justify-content: space-between;
+  /* vertical (BASED on this case) */
+
+  align-items: center;
+}
 
 /* mobile style */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 900px) {
   .navbar-top {
     /* box modeling */
-    background-color: #25008a;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+
     height: 120px;
     width: 100vw;
+    background-color: #4056A1;
     color: #ffffff;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    position: absolute;
+    position: fixed;
 
     /* flex properties */
 

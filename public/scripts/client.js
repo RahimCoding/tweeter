@@ -9,7 +9,7 @@ $(document).ready(function () {
   const createTweetElement = (tweetData) => {
 
     if (!tweetData) {
-
+      return;
     } else {
 
       const tweet = $(`<article class="tweet"> 
@@ -24,7 +24,7 @@ $(document).ready(function () {
     
     <footer class="tweet-footer">
       <div>
-        <p>${(new Date(tweetData.created_at).toLocaleString())}</p>
+        <p>${timeago.format(tweetData.created_at)}</p>
       </div>
       <div class="icon-hover">
         <i class="fa-solid fa-flag"></i>

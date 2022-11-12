@@ -8,16 +8,52 @@
   align-items: center;
   background-color: #25008a;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .hero-avatar {
- margin-top: 50px;
- height: 70%;
+  margin-top: 50px;
+  height: 70%;
 }
 
 .name {
   margin-top: -20px;
   color: #ffffff
 }
+/* desktop media query */
+@media only screen and (min-width: 900px) {
+  .header {
+    display: flex;
+    height: 400px;
+    width: 350px;
+    padding-top: 0px;
+    margin-top: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #25008a;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
 
+  .hero-avatar {
+    margin-top: 50px;
+    height: 70%;
+  }
+
+  .name {
+    margin-top: -20px;
+    color: #ffffff
+  }
+
+  body{
+    display: flex
+  }
+  
+  .container {
+    margin-top: 15vw;
+    margin-right: 5%;
+  }
+}
