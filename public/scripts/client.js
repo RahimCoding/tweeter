@@ -7,11 +7,11 @@ let loadTweets;
 $(document).ready(function () {
   // Test / driver code (temporary). Eventually will get this from the server.
   const createTweetElement = (tweetData) => {
-    console.log(tweetData);
+
     if (!tweetData) {
-      console.log("");
+
     } else {
-      console.log(tweetData);
+
       const tweet = $(`<article class="tweet"> 
     <header class="tweet-header"> 
       <div class="tweet-header-avatar">
@@ -37,16 +37,15 @@ $(document).ready(function () {
       return tweet;
     }
   };
-  // const $tweet = createTweetElement(tweetData);
 
-  // Test / driver code (temporary)
-  // console.log($tweet); // to see what it looks like
+
+
+
   // $('.tweets-section').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
   // Fake data taken from initial-tweets.json
   const renderTweets = function (tweets) {
     // loops through tweets
-    console.log(tweets);
     for (let i = 0; i < tweets.length; i++) {
       $('.tweets-section').prepend(createTweetElement(tweets[i]));
     }

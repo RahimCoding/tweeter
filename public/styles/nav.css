@@ -1,3 +1,4 @@
+/* global style */
 .navbar-top{
   /* box modeling */
 
@@ -21,6 +22,7 @@
   align-items: center;
 }
 
+
 .navbar-logo {
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
@@ -35,5 +37,34 @@
 .navbar-menu i {
   color: red;
   margin-top: -15px;
-  
+}
+
+
+
+/* mobile style */
+
+@media only screen and (max-width: 900px) {
+  .navbar-top {
+    /* box modeling */
+    background-color: #25008a;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    height: 120px;
+    width: 100vw;
+    color: #ffffff;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: absolute;
+
+    /* flex properties */
+
+    display: flex;
+
+    /* horizontal (BASED on this case)*/
+
+    justify-content: space-between;
+    /* vertical (BASED on this case) */
+
+    align-items: center;
+  }
+
 }
