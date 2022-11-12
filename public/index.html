@@ -32,6 +32,8 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/errorMessage.js"></script>
+  <script type="text/javascript" src="/scripts/button.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
@@ -48,23 +50,27 @@
   <header class="header">
     <img class="hero-avatar" src="/images/profile-hex.png"> 
     <br>
-    <h2 class="name">Your Name</h2>
+    <h2 class="name">Rahim Jamal</h2>
 </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <div class="error-message">
+        <h2 class="error-header">ERROR MESSAGE THIS IS A ERROR MESSAGE YOU MADE A ERROR LOL</h2>
+      </div>
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
         <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-        <div>
-          <button type="submit" class="btn btn-primary">Tweet</button>
-          <output name="counter" class="counter" id="tweet-button" for="tweet-text">140</output>
+        <div class="tweet-counter-div">
+          <button id="tweet-button" type="submit" class="btn btn-primary">Tweet</button>
+          <output name="counter" class="counter" id="tweet-counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
     <section class="tweets-section">
     </section>
+    
   </main>
 </body>
 

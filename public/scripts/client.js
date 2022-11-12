@@ -3,22 +3,16 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+let loadTweets;
 $(document).ready(function () {
   // Test / driver code (temporary). Eventually will get this from the server.
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116
-  };
   const createTweetElement = (tweetData) => {
-    return `<article class="tweet">
+    console.log(tweetData);
+    if (!tweetData) {
+      console.log("");
+    } else {
+      console.log(tweetData);
+      const tweet = $(`<article class="tweet"> 
     <header class="tweet-header"> 
       <div class="tweet-header-avatar">
         <img width="60px" height="60px" src="${tweetData.user.avatars}"> 
@@ -26,10 +20,11 @@ $(document).ready(function () {
       </div>
       <p class="tweet-header-handle">${tweetData.user.handle}</p>
     </header>
-    <p class="tweet-body-text">${tweetData.content.text}</p>
+    <p class="tweet-body-text"></p>
+    
     <footer class="tweet-footer">
       <div>
-        <p>${Math.round(tweetData.created_at / 86400)} days ago!</p>
+        <p>${(new Date(tweetData.created_at).toLocaleString())}</p>
       </div>
       <div class="icon-hover">
         <i class="fa-solid fa-flag"></i>
@@ -37,48 +32,39 @@ $(document).ready(function () {
         <i class="fa-solid fa-retweet"></i>
       </div>
     </footer>
-  </article>`;
+  </article>`);
+      tweet.find(".tweet-body-text").text(tweetData.content.text);
+      return tweet;
+    }
   };
-  const $tweet = createTweetElement(tweetData);
+  // const $tweet = createTweetElement(tweetData);
 
   // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
+  // console.log($tweet); // to see what it looks like
   // $('.tweets-section').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
   // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113
-    }
-  ];
-
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     // loops through tweets
+    console.log(tweets);
     for (let i = 0; i < tweets.length; i++) {
-      $('.tweets-section').append(createTweetElement(tweets[i]));
+      $('.tweets-section').prepend(createTweetElement(tweets[i]));
     }
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
   };
-  renderTweets(data);
+  // renderTweets(data);
+
+  loadTweets = function () {
+    $.get("/tweets", (data, status) => {
+      $(".tweets-section").empty();
+      renderTweets(data);
+    });
+  };
+
+  loadTweets();
+
+
 });
+
+
